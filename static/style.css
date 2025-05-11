@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body{
+    font-family: Raleway, Arial;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos Gerais da Navbar */
+.navbar {
+    background-color: #04338f; /* Azul escuro */
+    padding: 0.5rem 1rem;
+}
+
+.navbar .navbar-brand {
+    color: #fffefc; /* Branco */
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img {
+    width: 40px; /* Espaço para a logo */
+    margin-right: 10px;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: #3b77eb; /* Azul médio */
+}
+
+.navbar-toggler-icon {
+    background-color: #fffefc; /* Branco */
+}
+
+/* Navbar Collapse */
+.navbar-collapse {
+    background-color: #04338f; /* Azul escuro */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fffefc; /* Branco */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+    color: #3b77eb; /* Azul médio */
+    transform: scale(1.1); /* Animação de crescimento */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #fffefc; /* Branco para o link ativo */
+    border-bottom: 2px solid #3b77eb; /* Azul médio */
+}
+
+/* Responsividade - Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* Efeito no fundo da navbar quando rola a página */
+.navbar.fixed-top {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+section#inicio {
+    background-image: url(./img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+section#inicio h2{
+    font-size: 6rem;
+}
+
+section#inicio span#subtitle{
+    margin-right: 3rem;
+    font-size: 1.5rem;
+}
+
+.text-shadow{
+    text-shadow: 4px 4px 10px #1C1C1C;
+}
+
+section#inicio div#arraste{
+    width: 9rem;
+}
+
+section#inicio div#arraste a{
+    text-decoration: none;
+    color: #DCDCDC;
+}
+
+@media (max-width: 1024px) {
+    section#inicio h2{
+        font-size: 3.5rem;
+    }
+    section#inicio span#subtitle{
+        margin-right: 0;
+        font-size: 1rem;
+    }
+    #main{
+        margin-left: 0;
+    }
+}
+
+*::-webkit-scrollbar{
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track{
+    width: 12px;
+    box-shadow: inset 0 0 .3rem #1C1C1C;
+    background-color: #fffefc;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: #04338f;
+}
+
+.section-bg{
+background-color: #598beb;
+}
+
+.cv .cv-title{
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #1C1C1C;
+}
+
+.cv .cv-item{
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #04338f;
+    position: relative;
+}
+
+.cv .cv-item h4{
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "poppins", sans-serif;
+    color: #04338f;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item h5{
+    background: #DCDCDC;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.cv .cv-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #04338f;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.carousel-control-prev{
+    display: none;
+    margin-left: -8rem;
+}
+
+.carousel-control-next{
+    margin-right: -8rem;
+    display: none;
+}
+
+.carousel-indicators{
+    margin-bottom: -35px;
+}
+
+[data-anime]{
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime="down"]{
+    transform: translate3d(0, -100%, 0);
+}
+
+[data-anime="up"]{
+    transform: translate3d(0, 100%, 0);
+}
+
+[data-anime="left"]{
+    transform: translate3d(-100%, 0, 0);
+}
+
+[data-anime="right"]{
+    transform: translate3d(0px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 1860px){
+    .carousel-control-prev{
+        margin-left: 0;
+    }
+    
+    .carousel-control-next{
+        margin-right: 0;
+    }
+
+}
+
+#btn-enviar{
+    background-color: #04338f;
+    border-color: #04338f;
+}
+
+#btn-enviar-loader{
+    background-color: #04338f;
+    border-color: #04338f;
+}
+
+#links-port:hover{
+    background-color: #04338f;
+    color: #fffefc;
+}
+
+#links-port{
+    border-color: #04338f;
+    color: #04338f;
+}
+
+/* Estilo do Footer */
+footer {
+    background-color: #04338f; /* Azul escuro */
+    color: #fffefc; /* Branco */
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Raleway', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover sobre o footer */
+footer:hover {
+    background-color: #3b77eb; /* Azul médio */
+    color: #fffefc; /* Branco */
+}
+
+/* Estilo do texto dentro do footer */
+footer p {
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Animação do texto no footer */
+footer p {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para o footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilo dos ícones de redes sociais */
+footer .social-icons {
+    margin-top: 15px;
+}
+
+footer .social-icon {
+    font-size: 2rem; /* Tamanho dos ícones */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    color: #fffefc; /* Cor do ícone */
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+footer .social-icon:hover {
+    color: #3b77eb; /* Azul médio no hover */
+    transform: scale(1.1); /* Aumenta o ícone no hover */
+}
+
+/* Responsividade para o footer */
+@media (max-width: 768px) {
+    footer .social-icon {
+        font-size: 1.5rem; /* Tamanho menor em dispositivos móveis */
+    }
+}
