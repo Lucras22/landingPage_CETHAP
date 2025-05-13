@@ -377,3 +377,11 @@ footer .social-icon:hover {
 .btn-saiba-mais:hover::before {
   left: 125%;
 }
+
+.equipe-imagem img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* Limita a largura sem estourar o layout */
+  border-radius: 10px;
+}
