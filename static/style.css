@@ -339,3 +339,41 @@ footer .social-icon:hover {
         font-size: 1.5rem; /* Tamanho menor em dispositivos móveis */
     }
 }
+
+.btn-saiba-mais {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-saiba-mais::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.btn-saiba-mais:hover {
+  background: linear-gradient(135deg, #0056b3, #007BFF);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.btn-saiba-mais:hover::before {
+  left: 125%;
+}
