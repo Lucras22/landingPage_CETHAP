@@ -9,7 +9,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Serve a pasta 'templates' (onde estará o index.html)
-@app.get("/", response_class=HTMLResponse)
+@app.api_route("/", methods=["GET", "HEAD"], response_class=HTMLResponse)
 async def serve_home():
     html_path = Path("templates/index.html")
     return HTMLResponse(content=html_path.read_text(encoding="utf-8"))
