@@ -40,12 +40,14 @@ html, body{
 }
 
 .navbar-nav .nav-item {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .navbar-nav .nav-link {
     color: #fffefc; /* Branco */
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding: 0.5rem 0;
     font-weight: 500;
     transition: all 0.3s ease;
 }

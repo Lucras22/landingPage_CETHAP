@@ -23,3 +23,21 @@ btnEnviar.addEventListener("click", ()=>{
     btnEnviarLoader.style.display = "block";
     btnEnviar.style.display = "none";
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.getElementById('navbarNav');
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth < 992) {
+          const collapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+          });
+          collapse.hide();
+        }
+      });
+    });
+  });
+
+  
