@@ -274,13 +274,14 @@ footer {
     font-size: 1rem;
     font-family: 'Raleway', Arial, sans-serif;
     transition: all 0.3s ease;
+    margin-bottom: -10%; /* Para evitar espaço extra no final da página */
 }
 
 /* Efeito hover sobre o footer */
-footer:hover {
-    background-color: #3b77eb; /* Azul médio */
-    color: #fffefc; /* Branco */
-}
+/* footer:hover {
+    background-color: #3b77eb; /* Azul médio 
+    color: #fffefc; /* Branco 
+} */
 
 /* Estilo do texto dentro do footer */
 footer p {
